@@ -822,7 +822,13 @@ namespace ICSharpCode.SharpZipLib.Tests.Zip
 		[Category("Zip")]
 		public void UnicodeNameConversion()
 		{
+#if NET_UWP10
+			// https://msdn.microsoft.com/en-us/library/system.text.encoding.registerprovider(v=vs.110).aspx
+			// Encoding.RegisterProvider: Available since .NET Framework 4.6, Universal Windows Platform 10
+			// https://msdn.microsoft.com/en-us/library/mt643901(v=vs.111).aspx
+			// CodePagesEncodingProvider: Available since Universal Windows Platform 10
 			Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+#endif // #if NET_UWP10
 
 			ZipConstants.DefaultCodePage = 850;
 			string sample = "Hello world";

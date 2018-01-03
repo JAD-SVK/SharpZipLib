@@ -9,7 +9,9 @@ namespace ICSharpCode.SharpZipLib.Encryption
 	internal class ZipAESTransform : ICryptoTransform
 	{
 
-#if NET45
+#if !NET471
+		// https://msdn.microsoft.com/en-us/library/system.security.cryptography.incrementalhash(v=vs.110).aspx
+		// Available since 4.7.1
 		class IncrementalHash : HMACSHA1
 		{
 			bool _finalised;
@@ -27,12 +29,16 @@ namespace ICSharpCode.SharpZipLib.Encryption
 				return Hash;
 			}
 		}
+#endif // #if !NET471
 
+#if !NET46
+		// https://msdn.microsoft.com/en-us/library/system.security.cryptography.hashalgorithmname(v=vs.110).aspx
+		// Available since 4.6
 		static class HashAlgorithmName
 		{
-			public static string SHA1 = null;
+			public const string SHA1 = "SHA1";
 		}
-#endif
+#endif // #if !NET46
 
 		private const int PWD_VER_LENGTH = 2;
 
