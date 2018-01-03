@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 14 for Windows Desktop
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Configuration", "Solution Configuration", "{F1097E98-4DEB-4A0A-81EE-5CEC667EBDF0}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		Rebracer.xml = Rebracer.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICSharpCode.SharpZipLib.VS2015", "src\ICSharpCode.SharpZipLib\ICSharpCode.SharpZipLib.VS2015.csproj", "{6DC73582-1E45-4275-924B-16A082128888}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICSharpCode.SharpZipLib.VS2015.Tests", "test\ICSharpCode.SharpZipLib.Tests\ICSharpCode.SharpZipLib.VS2015.Tests.csproj", "{31839008-9A70-4CF6-A8F2-60D83095CB49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DC73582-1E45-4275-924B-16A082128888}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC73582-1E45-4275-924B-16A082128888}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC73582-1E45-4275-924B-16A082128888}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC73582-1E45-4275-924B-16A082128888}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31839008-9A70-4CF6-A8F2-60D83095CB49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31839008-9A70-4CF6-A8F2-60D83095CB49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31839008-9A70-4CF6-A8F2-60D83095CB49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31839008-9A70-4CF6-A8F2-60D83095CB49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
